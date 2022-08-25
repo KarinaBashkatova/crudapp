@@ -1,6 +1,6 @@
 package ru.web.crudapp.controller;
 
-import org.jetbrains.annotations.NotNull;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.web.crudapp.model.User;
 import ru.web.crudapp.services.UserService;
+import ru.web.crudapp.services.UserServiceInterface;
 
 import javax.validation.Valid;
 
@@ -18,7 +19,7 @@ import javax.validation.Valid;
 @RequestMapping("/users")
 public class UsersController {
 
-    private final UserService userService;
+    private final UserServiceInterface userService;
 
     @Autowired
     public UsersController(UserService userService) {
